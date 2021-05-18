@@ -5,7 +5,7 @@ macbook_crawler fur Data Integration Kursprojekt
 Một số trang đã craw:
 
 ## CellphoneS
-##H anoiComputer
+## HanoiComputer
 ## Mac24h
 ## MacOne
 ## MacbookStore
