@@ -33,7 +33,7 @@ class Macbook24h(scrapy.Spider):
             elif 'gpu' in params.lower() or "graphics" in params.lower() or 'vga' in params.lower():
                 item['gpu'] = params
             elif 'storage' in params.lower() or 'sdd' in params.lower() or 'hdd' in params.lower():
-                item['storage'] = params
+                item['rom'] = params
             elif 'ram' in params.lower() or 'ddr' in params.lower() or 'memory' in params.lower():
                 item['ram'] = params
             elif 'inch' in params.lower() or 'display' in params.lower() or 'retina' in params.lower():

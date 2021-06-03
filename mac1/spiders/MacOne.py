@@ -32,6 +32,12 @@ class MacOne(scrapy.Spider):
             if len(params.css('td')) > 1:
                 params_name = params.css('td > strong ::text').extract_first().strip()
                 params_value = params.css('td::text').extract_first()
+                if 'CPU' in params_name or 'cpu' in params_name:
+                    params_name= 'cpu'
+                elif 'RAM' in params_name or 'ram' in params_name:
+                    params_name = 'ram'
+                elif 'Ổ cứng' in params_name:
+                    params_name = 'rom'
                 item[params_name] = params_value
 
         item['url'] = url

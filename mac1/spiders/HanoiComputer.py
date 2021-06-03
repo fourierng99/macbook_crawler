@@ -36,6 +36,13 @@ class Macbook24h(scrapy.Spider):
             if len(params.css('td > p::text')) > 1:
                 params_name = params.css('td > p::text')[0].extract()
                 params_value = params.css('td> p::text')[1].extract()
+
+                if('vi xử lý' in params_name):
+                    params_name = 'cpu'
+                elif ('Bộ nhớ trong' in params_name):
+                    params_name = 'ram'
+                elif 'Ổ cứng' in params_name:
+                    params_name = 'rom'
             else:
                 params_name = "err_" + str(pid)
                 params_value = 'error_value'
