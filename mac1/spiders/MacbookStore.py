@@ -1,5 +1,5 @@
 import scrapy
-
+from mac1.matching import *
 
 class MacbookStore(scrapy.Spider):
     name = 'MacbookStore'
@@ -51,5 +51,5 @@ class MacbookStore(scrapy.Spider):
         item['url'] = url
         item['website'] = self.allowed_domains[0]
         
-        yield item
+        yield convert(item)
 

@@ -1,7 +1,7 @@
 import scrapy
 from scrapy.http import request
 import requests
-
+from mac1.matching import *
 
 class Macbook24h(scrapy.Spider):
     name = 'hanoicom'
@@ -52,4 +52,4 @@ class Macbook24h(scrapy.Spider):
         item['website'] = self.allowed_domains[0]
         item['tssss'] = len(self.lst_url)
 
-        yield item
+        yield convert(item)

@@ -1,5 +1,5 @@
 import scrapy
-from mac1.matching import *
+
 
 class TrueSmart(scrapy.Spider):
     name = 'truesmart'
@@ -67,4 +67,4 @@ class TrueSmart(scrapy.Spider):
         item['url'] = url
         item['website'] = self.allowed_domains[0]
 
-        yield convert(item)
+        yield item

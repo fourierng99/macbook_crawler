@@ -1,6 +1,19 @@
+# Define here the models for your scraped items
+#
+# See documentation in:
+# https://docs.scrapy.org/en/latest/topics/items.html
+
 import scrapy
-import unicodedata
-class DemoScrapyItem(scrapy.Item):
+from scrapy.item import Field
+
+
+class CrawlerItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    pass
+
+
+class SchemaItems(scrapy.Item):
     name = Field()
     color = Field()
     status = Field()    # cũ, mới
@@ -17,7 +30,7 @@ class DemoScrapyItem(scrapy.Item):
     os = Field()
     gpu = Field()
     size = Field()
-    weigth = Field()
+    weight = Field()
     tech = Field()
     wifi = Field()
     bluetooth = Field()
